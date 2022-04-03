@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PLANET DEFENDER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=stylesheet href="game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="game.js"></script>
+</head>
+<body onload="init()">
+
+
+<canvas id="canvas" width="500" height="800"></canvas> 
+<button id="left_button" onmousedown="left_down()" onmouseup="left_up()" > LEFT</button>
+<button id="right_button" onmousedown="right_down()" onmouseup="right_up()" > RIGHT</button> 
+<button id="shoot_button" onmousedown="shoot_down()" onmouseup="shoot_up()" > SHOOT</button> 
+
+
+<form>
+	<p class = "h">Change Player Inputs:</p>
+	<p>Left: <input type="text" class = "txt1" placeholder="Left" id="left" value="a"></p>
+    <p>Right: <input type="text" class = "txt1" placeholder="Right" id="right" value="d"></p>
+    <p>Up: <input type="text" class = "txt1" placeholder="Up" id="up" value="w"></p>
+    <p>Down: <input type="text" class = "txt1" placeholder="Down" id="down" value="s"></p>
+    <p>Shoot: <input type="text" class = "txt1" placeholder="Shoot" id="shoot" value=" "></p>  
+    <button type="button" class = "b1" onclick="getInputValue();">Get Value</button>
+    </form>
+    <br />
+    <div>Search:<input type="text" id="search" class = "txt2">
+                <button type="button" class = "b2" onclick="drawScoreboard();">Search</button>      
+                <button type="button" class = "b2" onclick="pauseGame();">Pause/Unpause Game</button>            
+    </div>
+
+
+<table id="table">
+    <tr>
+        <th>Username</th>
+        <th>Score</th>
+        <th>Time</th> 
+    </tr>   
+</table>
+<a href="references.html">Resources</a>
+</body>
+</html>

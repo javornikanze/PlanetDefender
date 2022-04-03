@@ -1,0 +1,252 @@
+.h {
+	margin: 0px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: rgb(228, 229, 255);
+}
+
+a {
+    display: block;
+    border-radius: 5px;
+	padding: 5px;	
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+	width: max-content;
+	height: max-content;
+	font-family: 'Calibri';
+	font-weight: bold;
+	text-decoration: none;
+}
+
+p {
+	margin: 0px;
+	margin-bottom: 5px;
+	color: rgb(228, 229, 255);
+}
+
+div {
+	grid-area: div;
+	margin: 10px;
+	font-family: 'Calibri';
+	width: max-content;
+	color: rgb(228, 229, 255);
+}
+
+
+canvas {
+	grid-area: canvas;
+	border-radius: 8px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4),
+				0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+body {
+	background-color: rgb(27, 27, 44);
+}
+
+
+table {
+	grid-area: tabela;
+	border-radius: 25px;
+}
+
+table, td, th {
+	font-family: 'Calibri';
+	color: rgb(228, 229, 255);
+    border-radius:6px;
+	padding: 5px;
+	min-width: 150px;
+	max-width: 150px;
+	height: max-content;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden; /*https://www.codegrepper.com/code-examples/css/css+add+dots+if+text+too+long*/
+}
+
+
+th, thead {
+	background-color: rgb(53, 53, 94);
+	border-top: none;
+}
+
+
+tbody {
+	background-color: rgb(69, 69, 130);
+}
+
+td:first-child, th:first-child {
+	border-left: none;
+}
+
+
+form {
+	grid-area: form;
+	font-family: 'Calibri';
+	background-color:  rgb(53, 53, 94);
+	padding: 10px;
+	border-radius: 8px;
+	width: max-content;
+	height: max-content;
+	margin: 10px;
+}
+
+.txt1 {
+	border-radius: 5px;
+	padding: 2px;
+	margin-left: 10px;
+	float: right;
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+  }
+
+.txt2 {
+	border-radius: 5px;
+	padding: 2px;
+	margin-left: 10px;
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+  }
+
+.b1 {
+	border: 0px;
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 52px;
+  }
+
+.b2 {
+	border: 0px;
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 12px;
+}
+#left_button, #right_button, #shoot_button {
+	font-weight: bold;
+	border: 0px;
+	background-color: rgba(69, 69, 130, 0.4);
+	border: 1px solid rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+	border-radius: 5px;
+	padding: 5px;
+}
+  
+@media screen and (min-width: 1279px) {
+	body {
+	  display: grid;
+	  grid-template-columns: 40% 30%;
+	  grid-template-areas: 
+	  'form canvas'
+	  'div canvas'
+	  'tabela canvas'
+	  'a a'
+	  ;
+	  grid-template-rows: 25% 6% 64% 5%;
+	}
+	#left_button, #right_button, #shoot_button { 
+		display: none;
+	}
+	a {
+		margin-top: 15px;
+	}
+  }
+
+@media screen and (max-width: 1279px) {
+	body {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-areas:
+		'canvas'
+		'form'
+		'div'
+		'tabela'
+		;
+	}
+	canvas, table, form, div, a {
+		margin: auto;
+	}
+	
+	form, div {
+		margin-top: 10px;
+	}
+
+	#left_button {
+		top: 720px;
+		padding: 20px;
+		left: calc(calc(100vw - 480px)/2);
+		width: max-content;
+		position: absolute;
+	}
+
+	#right_button {
+		top: 720px;
+		padding: 20px;
+		left: calc(calc(100vw + 310px)/2);
+		width: max-content;
+		position: absolute;
+	}
+
+	#shoot_button {
+		top: 720px;
+		padding: 20px;
+		left: calc(50vw - 40px);
+		width: max-content;
+		position: absolute;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		display: inline-grid;
+		grid-template-columns: 100%;
+		grid-template-areas:
+		'canvas'
+		'form'
+		'div'
+		'tabela'
+		;
+	}
+	canvas, table, form, div {
+		margin: auto;
+	}
+	
+	form, div {
+		margin-top: 10px;
+	}
+
+	#left_button {
+		top: 720px;
+		padding: 20px;
+		left: 20px;
+		width: max-content;
+		height: max-content;
+		position: absolute;
+	}
+
+	#right_button {
+		top: 720px;
+		padding: 20px;
+		left: 410px;
+		width: max-content;
+		height: max-content;
+		position: absolute;
+	}
+	#shoot_button {
+		top: 720px;
+		padding: 20px;
+		left: 210px;
+		width: max-content;
+		height: max-content;
+		position: absolute;
+	}
+}
+
+  
+
+

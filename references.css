@@ -1,0 +1,23 @@
+* {
+    font-family: 'Calibri';
+}
+h1 {
+    margin-left: 5px;
+    color: rgb(228, 229, 255);
+}
+
+a {
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+	padding: 5px;	
+	background-color: rgb(69, 69, 130);
+	color: rgb(228, 229, 255);
+	width: max-content;
+	height: max-content;
+}
+
+
+body {
+    background-color: rgb(27, 27, 44);
+}
