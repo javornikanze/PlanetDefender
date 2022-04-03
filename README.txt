@@ -1,4 +1,5 @@
 PLANET DEFENDER GAME
+
 Objective:      Minimize damage on the planet by shooting incoming rockets.
 
 Rules:          For each rocket you hit, you gain 10 points. 
